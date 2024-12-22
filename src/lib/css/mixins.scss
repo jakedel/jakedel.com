@@ -1,0 +1,77 @@
+@mixin hgap($gap) {
+	> :global(*:not(:last-child)) {
+		margin-right: $gap;
+	}
+}
+
+@mixin vgap($gap) {
+	> :global(*:not(:last-child)) {
+		margin-bottom: $gap;
+	}
+}
+
+@mixin fill {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+@mixin fill-pseudo {
+	content: '';
+	display: block;
+	@include fill;
+}
+
+@mixin scroll {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	overscroll-behavior: contain; // disables pull-to-refresh on iOS (16.0+)
+	-webkit-overflow-scrolling: touch;
+}
+
+@mixin scroll-h {
+	overflow-y: hidden;
+	overflow-x: scroll;
+	overscroll-behavior: contain;
+	-webkit-overflow-scrolling: touch;
+}
+
+@mixin noScrollbar {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@mixin wrapper {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1280px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+@mixin wrapper-pad {
+	@include wrapper;
+	padding-left: 23px;
+	padding-right: 23px;
+}
+
+@mixin scent {
+	color: transparent;
+	background: linear-gradient(180deg, #8DEADB 0%, #6EE2DA 25%, #52D9DB 50%, #39D0DA 75%, #26C5DA 100%);
+	background-clip: text;
+}
+
+@mixin sakura-scent {
+	color: transparent;
+	background: linear-gradient(180deg, #F4D0FF 0%, #E1C7FF 25%, #C1C3F9 50%, #94BDF1 75%, #67BBEA 100%);
+	background-clip: text;
+}
+
+@mixin stargazing-dreamer-scent {
+	color: transparent;
+	background: linear-gradient(160deg,#7FE1DF 0%, #6ED3DF 25%, #74B6DB 50%, #928FC9 100%);
+	background-clip: text;
+}
