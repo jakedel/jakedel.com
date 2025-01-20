@@ -140,6 +140,8 @@
 	<div class="drop2">
 		<img src={drop} height={64} alt="" />
 	</div>
+
+	<a style:display="none" href="{base}/hello-nautilus">.</a>
 </section> -->
 
 

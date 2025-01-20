@@ -27,7 +27,7 @@
 	// 	animatingOut = 0
 	// })
 
-	$: onRoot = $page.url.pathname === '/' 
+	$: onRoot = $page.url.pathname === '/' || $page.url.pathname === '/hello-nautilus'
 	$: onTest = $page.url.pathname === '/test'
 	export const prerender = true 
 </script>
