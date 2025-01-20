@@ -23,10 +23,19 @@
 	<!-- <img class="wave" src={deco_wave} alt="" draggable="false" /> -->
 
 	<div class="wrapper">
-		<div class="logo">
-			<img src={logo} alt="" width={108} height={108} />
-			<h1>Jake Delgado</h1>
-		</div>
+		{#if white}
+			<a class="home" href="{base}/">
+				<div class="logo">
+					<img src={logo} alt="" width={108} height={108} />
+					<h1>Jake Delgado</h1>
+				</div>
+			</a>
+		{:else}
+			<div class="logo">
+				<img src={logo} alt="" width={108} height={108} />
+				<h1>Jake Delgado</h1>
+			</div>
+		{/if}
 
 		<ul>
 			<NavButton
@@ -95,8 +104,13 @@
 		padding-top: 10px;
 		padding-bottom: 17px;
 		@include hgap(45px);
-}
+	}
 
+
+	a.home {
+		text-decoration: none;
+		color: inherit;
+	}
 
 	
 	.logo {
