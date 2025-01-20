@@ -70,6 +70,7 @@
 					href="{base}/audo"
 					name="audo"
 					desc="reimagining '90s “tracker” music apps for iPhone."
+					award="Apple WWDC '18 Scholarships •	 Winning Entry"
 					icon="🎹"
 				/>
 			</div>

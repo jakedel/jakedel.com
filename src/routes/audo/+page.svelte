@@ -17,11 +17,13 @@
 	linkHref="https://github.com/jakedel/Audo"
 	date="2017 - 18"
 >
+	<img class="bg" src={au_hero} alt="" />
+
+
 	<section>
 		<p>🏆 Apple WWDC 2018 Scholarships winning entry</p>
 		<p style:margin-top="-10px" style:opacity="0.5"><small>300 app demos were selected from 10,000+ submissions</small></p>
 	</section>
-	<img class="bg" src={au_hero} alt="" />
 
 	<section>
 		<p>In the 1990s, before music production apps standardized on the "piano roll" &mdash; a grid of colored rectangles which represent notes &mdash; another unique interface for writing music called the "tracker" used to be common. Trackers felt more akin to a spreadsheet, with numbered cells and lots of text.</p>

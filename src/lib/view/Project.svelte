@@ -13,6 +13,7 @@
 	export let icon: string|null = null
 	export let tags: string[] = []
 	export let count = 0
+	export let award: string|null = null
 
 	export let folder = false
 </script>
@@ -52,6 +53,12 @@
 				<div class="desc-row">
 					<span class="icon" class:bold={icon === '♪'}>{icon}</span>
 					<p class="desc">{desc}</p>
+				</div>
+			{/if}
+			{#if award}
+				<div class="desc-row">
+					<span class="icon">🏆</span>
+					<p class="desc award">{award}</p>
 				</div>
 			{/if}
 		</div>
@@ -347,7 +354,7 @@
 		align-items: flex-start;
 		padding: 16px 20px 0 20px;
 		height: 152px;
-		height: 128px;
+		height: 140px;
 		@include hgap(9px);
 
 		background-image: url('$lib/res/corner.svg');
@@ -381,6 +388,11 @@
 		display: flex;
 		align-items: center;
 		@include hgap(3px);
+	}
+
+	.desc.award {
+		color: #ff5bad;
+		font-weight: 600;
 	}
 
 	.icon {

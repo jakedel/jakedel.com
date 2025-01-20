@@ -71,6 +71,7 @@
 					name="audo"
 					desc="reimagining '90s “tracker” music apps for iPhone."
 					icon="🎹"
+					award="Apple WWDC '18 Scholarships •	 Winning Entry"
 				/>
 			</div>
 
