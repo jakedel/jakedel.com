@@ -246,6 +246,7 @@
 		opacity: 0;
 		display: block;
 		width: 100%;
+		// height: 120px;
 		pointer-events: none;
 	}
 
@@ -300,6 +301,7 @@
 	a > .logo {
 		right: 12px;
 		bottom: 111px;
+		bottom: 87px;
 		z-index: 2;
 		isolation: isolate;
 	}
@@ -343,6 +345,7 @@
 		align-items: flex-start;
 		padding: 16px 20px 0 20px;
 		height: 152px;
+		height: 128px;
 		@include hgap(9px);
 
 		background-image: url('$lib/res/corner.svg');

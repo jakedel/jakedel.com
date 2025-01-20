@@ -5,11 +5,12 @@
 	export let icon: string|null = null;
 	export let alt = false;
 	export let pad = false;
+	export let center = false;
 </script>
 
-<header class:tangram>
+<header class:tangram class:center>
 	<div class="wrapper" class:pad>
-		<Title {icon} {alt}><slot /></Title>
+		<Title {icon} {alt} {center}><slot /></Title>
 		<div class="sensory_blooomss" />
 	</div>
 </header>
@@ -42,6 +43,9 @@
 		align-items: center;
 		height: 153px;
 	}
+	header.center .wrapper {
+		justify-content: center;
+	}
 	.sensory_blooomss {
 		position: absolute;
 		top: -20px;
@@ -55,5 +59,9 @@
 		mix-blend-mode: hue;
 		opacity: 0.9;
 		pointer-events: none;
+	}
+	header.center .sensory_blooomss {
+		left: calc(50% - 493px);
+		opacity: 0.78;
 	}
 </style>

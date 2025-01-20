@@ -1,15 +1,16 @@
 <script lang="ts">
 	export let img = ''
 	export let text = ''
-	export let year: string
+	export let year: string|null = null
 	export let isNew = false
 
-	export let href = ''
+	export let href: string|null = null;
 	export let square = false
 	export let expand = false
 </script>
 
-<a
+<svelte:element
+	this={href ? 'a' : 'div'}
 	class="GalleryItem"
 	{href}
 	class:square
@@ -21,21 +22,26 @@
 
 		<figcaption>
 			<p class="title">{text}</p>
+
 			{#if year}
 				<!-- <p class="year">&nbsp;• {year}</p> -->
 				<p class="year">&nbsp;<span style:font-size="10.4px" style:position="relative" style:top="-6px">✦</span>&nbsp;{year}</p>
 			{/if}
+
 			{#if isNew}
 				<div class="new"><p>new</p></div>
 			{/if}
 		</figcaption>
 	</figure>
-</a>
+</svelte:element>
 
 <style lang="scss">
 	.GalleryItem {
 		display: contents;
 		color: #2f2f2f;
+	}
+	a.GalleryItem {
+		cursor: zoom-in;
 	}
 
 	figure {
@@ -74,8 +80,8 @@
 	}
 	.new p {
 		font-family: "Champagne & Limousines";
-		letter-spacing: 0.2em;
-		font-size: 23px;
+		letter-spacing: 0.225em;
+		font-size: 21.5px;
 		margin: 0;
 		color: #bbb;
 		margin-left: 5px;
@@ -92,14 +98,17 @@
 	.GalleryItem.wide figure {
 		flex-grow: 1;
 	}
-	.GalleryItem.expand .img {
-		align-self: stretch;
-	}
 	.img {
 		flex-grow: 1;
 		align-self: center;
 		margin: 20px;
 		margin-bottom: 0;
+		max-width: 100%;
+		max-height: 292px;
+	}
+	.GalleryItem.expand .img {
+		align-self: stretch;
+		max-height: 100%;
 	}
 
 

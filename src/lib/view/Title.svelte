@@ -1,13 +1,16 @@
 <script lang="ts">
 	export let icon: string|null = null;
+	export let subtitle: string|null = null;
 	export let scent = false;
 	export let alt = false;
 	export let white = false;
+	export let center = false;
 	import fluid_divider from '$lib/res/fluid_divider.svg'
 </script>
 
-<div class="Title" class:scent class:alt class:white>
+<div class="Title" class:scent class:alt class:white class:center>
 	<div class="row">
+		{#if subtitle}<h3>{subtitle}</h3>{/if}
 		<h1><slot /></h1>
 		<slot name="accessory" />
 
@@ -26,6 +29,10 @@
 		flex-direction: column;
 		align-items: flex-start;
 		@include vgap(3px);
+	}
+
+	.Title.center {
+		align-items: center;
 	}
 
 	.row {
@@ -49,6 +56,48 @@
 
 	h1 :global(img) {
 		margin-left: -28px;
+	}
+
+	// h2 {
+	// 	// text-transform: uppercase;
+	// 	font-size: 24px;
+	// 	position: absolute;
+	// 	top: -44px;
+	// 	font-family: "Champagne & Limousines";
+	// 	color: white;
+	// 	padding-left: 3px;
+	// 	font-weight: 300;
+	// 	padding-right: 6px;
+	// 	letter-spacing: -0.0655em;
+	// }
+
+	// h2 {
+	// 	text-transform: uppercase;
+	// 	font-size: 24px;
+	// 	position: absolute;
+	// 	top: -24px;
+	// 	margin: 0;
+	// 	font-family: "Champagne & Limousines";
+	// 	color: white;
+	// 	opacity: 0;
+	// 	padding-left: 3px;
+	// 	font-weight: 300;
+	// 	padding-right: 6px;
+	// 	letter-spacing: -0.0555em;
+	// }
+
+	h3 {
+		text-transform: uppercase;
+		font-size: 21.5px;
+		position: absolute;
+		top: -23px;
+		margin: 0;
+		font-family: "Caviar Dreams";
+		color: white;
+		padding-left: 3px;
+		font-weight: 300;
+		padding-right: 6px;
+		letter-spacing: -0.0855em;
 	}
 
 	.Title.scent h1 {
@@ -87,12 +136,14 @@
 
 	.divider {
 		opacity: 0.115;
+		opacity: 0.25;
 		margin-bottom: -0px;
 		margin-top: -0px;
 	}
 
 	.Title.white .divider {
-		opacity: 0.5;
+		// opacity: 0.5;
+		opacity: 0.9;
 		filter: invert(100%);
 	}
 </style>

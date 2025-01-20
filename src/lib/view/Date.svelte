@@ -33,7 +33,7 @@
 		padding-right: 6px;
 	}
 
-	p:global(:has(span)) {
+	p:global(:has(span.stylish)) {
 		position: relative;
 		top: 1px;
 	}

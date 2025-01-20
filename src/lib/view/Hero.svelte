@@ -57,7 +57,7 @@
 					<span class="fresh_air">
 						<span>
 							<span>
-								<Ribbon icon={icon_mail}>hello@jakedel.com</Ribbon>
+								<Ribbon icon={icon_mail} href="mailto:thejakedel@gmail.com">thejakedel@gmail.com</Ribbon>
 							</span>
 						</span>
 					</span>

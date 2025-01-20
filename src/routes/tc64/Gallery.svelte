@@ -3,13 +3,15 @@
 	import tc_tsunami from '$lib/res/tc_tsunami_s.jpg'
 	import tc_aoryu from '$lib/res/tc_aoryu_s.jpg'
 	import tc_rainforest from '$lib/res/tc_rainforest_s.jpg'
-	import tc_selection from '$lib/res/tc_selection_s.jpg'
+	import tc_soso from '$lib/res/tc_soso_s.jpg'
 	import tc_deep from '$lib/res/tc_deep_s.jpg'
 	import tc_plastic from '$lib/res/tc_plastic_s.jpg'
+	import tc_uprising from '$lib/res/tc_uprising_s.jpg'
+	import tc_prophecy from '$lib/res/tc_prophecy_s.jpg'
 	import GalleryItem from '$lib/view/GalleryItem.svelte'
 </script>
 
-<section class="Gallery">
+<div class="Gallery">
 	<div class="wrapper">
 		<div class="group">
 			<div class="row">
@@ -37,9 +39,9 @@
 
 			<div class="row">
 				<GalleryItem
-					text="Sound Selection" 
-					href="/tc64/sound-selection"
-					img={tc_selection}
+					text="@Sound Society Set" 
+					href="/tc64/sound-society-set"
+					img={tc_soso}
 					square
 					year="2022"
 				/>
@@ -55,22 +57,38 @@
 					href="/tc64/desktop-worlds"
 					img={tc_plastic}
 					year="2023"
-				/> 
+				/>
 			</div>
 		</div>
 		<div class="group">
 			<div class="row">
 				<GalleryItem
 					text="Banner Illustration"
-					href="/tc64/banner"
 					img={tc_banner}
 					year="2021"
 					expand
 				/>
+				<!-- href="/tc64/banner" -->
 			</div>
 		</div>
 	</div>
-</section>
+	<div class="group">
+		<div class="row">
+			<GalleryItem
+				text="The Uprising"
+				href="/tc64/the-uprising"
+				img={tc_uprising}
+				year="2020"
+			/>	
+			<GalleryItem
+				text="PROPHECY"
+				href="/tc64/prophecy"
+				img={tc_prophecy}
+				year="2020"
+			/>
+		</div>
+	</div>
+</div>
 
 
 

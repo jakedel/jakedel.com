@@ -243,7 +243,7 @@
 			font-size: 28px;
 			color: #FFFC;
 			font-family: "lato";
-			letter-spacing: -2.78px;
+			letter-spacing: -2.6px; //-2.78
 			animation: none;
 			// order: -1;
 		// margin-bottom: 13px;

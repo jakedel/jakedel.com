@@ -6,7 +6,7 @@
 
 <SongTemplate
 	title="TSUNAMI DAYBREAK"
-	date="08.2022"
+	date="2022.08"
 	img={tc_tsunami}
 
 	soundcloud="https://soundcloud.com/tc64x/sets/aoryu-sea-bridge"
@@ -24,7 +24,7 @@
 	</div>
 
 	<div>
-		<h2>Software</h2>
+		<h2>Tools</h2>
 		<p>Ableton Live, Figma (artwork)</p>
 	</div>
 

@@ -5,7 +5,7 @@
 
 <SongTemplate
 	title="RAINFOREST ROTATION"
-	date="07.2022"
+	date="2022.07"
 	img={tc_rainforest}
 
 	soundcloud="https://soundcloud.com/tc64x/rainforest-rotation-demo-2022/s-P58ePnqWVzm?si=18e4157addce4e5aa6d54a11e50c8990&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
@@ -16,7 +16,7 @@
 	</div>
 
 	<div>
-		<h2>Software</h2>
+		<h2>Tools</h2>
 		<p>Auxy Studio, Figma (artwork)</p>
 	</div>
 

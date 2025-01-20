@@ -8,7 +8,7 @@
 
 <footer>
 	<div class="wrapper">
-		<p>© 2024</p>
+		<p>© 2025</p>
 
 		<div class="drop2">
 			<img src={drop} height={64} alt="" />
@@ -65,7 +65,7 @@
 	p {
 		font-family: 'Open Sans Condensed';
 		font-weight: 300;
-		letter-spacing: 2px;
+		letter-spacing: 2.5px; //2px
 		color: #aaa;
 		margin: 0;
 	}

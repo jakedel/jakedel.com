@@ -1,5 +1,6 @@
 <script lang="ts">
 	import tc_aoryu from '$lib/res/tc_aoryu.png'
+	// import ic_aoryu from '$lib/res/ic_aoryu.svg'
 	import it1 from "$lib/res/it_ao_1.png"
 	import it2 from "$lib/res/it_ao_2.png"
 	import it3 from "$lib/res/it_ao_3.png"
@@ -14,7 +15,7 @@
 
 <SongTemplate
 	title="AORYU SEA BRIDGE"
-	date="08.2024"
+	date="2024.08"
 	img={tc_aoryu}
 
 	soundcloud="https://soundcloud.com/tc64x/sets/tsunami-daybreak"
@@ -38,7 +39,7 @@
 	</div>
 
 	<div>
-		<h2>Software</h2>
+		<h2>Tools</h2>
 		<p>Auxy Studio, Figma (artwork)</p>
 	</div>
 

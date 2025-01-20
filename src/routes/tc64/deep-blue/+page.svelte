@@ -5,7 +5,7 @@
 
 <SongTemplate
 	title="DEEP BLUE"
-	date="2022 • Unreleased"
+	date="2022 • Unreleased."
 	img={tc_deep}
 >
 	<div>
@@ -14,7 +14,7 @@
 	</div>
 
 	<div>
-		<h2>Software</h2>
+		<h2>Tools</h2>
 		<p>Figma (artwork)</p>
 	</div>
 

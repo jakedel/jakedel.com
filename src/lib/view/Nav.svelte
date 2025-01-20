@@ -52,7 +52,7 @@
 
 		{#if hasEmail}
 			<div class="email">
-				<Ribbon white={!white} icon={white ? ic_mail_colors : ic_mail}>hello@jakedel.com</Ribbon>
+				<Ribbon white={!white} icon={white ? ic_mail_colors : ic_mail} href="mailto:thejakedel@gmail.com">thejakedel@gmail.com</Ribbon>
 			</div>
 		{/if}
 	</div>
@@ -82,7 +82,7 @@
 		color: #888;
 		// box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 		z-index: 2;
-		box-shadow: 0px 1px 4px rgba(0,0,0,0.09);
+		// box-shadow: 0px 1px 4px rgba(0,0,0,0.09);
 	}
 
 	.wrapper {

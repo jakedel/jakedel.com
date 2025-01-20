@@ -4,16 +4,22 @@
 	import icon_mail from "$lib/res/icon_mail.svg"
 	import deco_wave from '$lib/res/deco_wave.svg'
 	import { ripple } from "svelte-ripple-action"
+	import icon_flower from "$lib/res/icon_flower.svg"
+	import icon_diamond from "$lib/res/icon_diamond.png"
 
 	export let triangleColor: string | null = null;
 	let drip = false;
 	let hovered = false;
 </script>
 
+<div class="blooms">
+	<img src={icon_diamond} height={64} alt="" />
+</div>
+
 <div class="EmailBlock" class:hovered use:ripple={{ color: '#FFF2', disabled: !hovered }} >
 	<div class="triangle" style:background-color={triangleColor} />
-	<NavButton bind:hovered bind:clicked={drip} large icon={icon_mail} text="hello@jakedel.com" href="mailto:hello@jakedel.com" />
-	<!-- <a href="mailto:hello@jakedel.com">hello@jakedel.com</a> -->
+	<NavButton bind:hovered bind:clicked={drip} large icon={icon_mail} text="thejakedel@gmail.com" href="mailto:thejakedel@gmail.com" />
+	<!-- <a href="mailto:thejakedel@gmail.com">thejakedel@gmail.com</a> -->
 	<div class="drop">
 		<!-- <img class:drip src={drop} height={64} alt="" /> -->
 	</div>
@@ -32,6 +38,12 @@
 		z-index: 999;
 		height: 18px;
 		pointer-events: none;
+	}
+	.blooms {
+		height: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	.EmailBlock {
 		position: relative;

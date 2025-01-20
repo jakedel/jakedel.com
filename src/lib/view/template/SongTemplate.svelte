@@ -13,8 +13,13 @@
 	import Back from '$lib/view/Back.svelte'
 
 	export let title: string
-	export let date: string
+	export let subtitle = 'TC64'
+	export let date: string|null = null
 	export let img: string
+	export let icon: string|null = null
+	export let source = 'TC64'
+	export let sourceUrl = '/tc64'
+	export let center = false
 
 	export let soundcloud: string | null = null;
 	export let spotify: string | null = null;
@@ -28,27 +33,28 @@
 	<!--TITLE-->
 	<header>
 		<div class="wrapper">
-			<Title white>
+			<Title {subtitle} white {icon}>
 				{title}
 			</Title>
-			<div class="date">
-				<Date white>
-					<span class="stylish">{date}</span>
-				</Date>
-			</div>
+			{#if date}
+				<div class="date">
+					<Date white>
+						<span class="stylish">{date}</span>
+					</Date>
+				</div>
+			{/if}
 		</div>
 	</header>
 
 	<!--DETAIL-->
-	<section class="detail">
+	<section class="detail" class:center>
 		<div class="wrapper">
 			<figure>
-				<img src={img} alt="{title} cover art" />
+				<img src={img} alt={source == 'TC64' ? `${title} cover art` : ''} />
+				<slot name="images" />
 			</figure>
 
 			<aside>
-				<slot />
-
 				{#if soundcloud || spotify || appleMusic}
 					<ul class="links">
 						{#if soundcloud && !spotify && !appleMusic} 
@@ -64,6 +70,8 @@
 				<div class="embed">
 					<slot name="embed"/>
 				</div>
+				
+				<slot />
 			</aside>
 		</div>
 	</section>
@@ -90,7 +98,7 @@
 		</section>
 	{/if}
 
-	<Back text="back to TC64" href="/tc64" />
+	<Back text="back to {source}" href={sourceUrl} />
 </div>
 
 <style lang="scss">
@@ -110,12 +118,12 @@
 	.body {
 		position: relative;
 		background-color: #01BBD4;
-		background-image: url("$lib/res/bg_nav.jpg");
+		background-image: linear-gradient(#00000003, #0001), url("$lib/res/bg_nav.jpg");
 		background-size: 100% 100%;
 	}
 
 	header {
-		padding-top: 30px;
+		padding-top: 45px;
 		padding-bottom: 36px;
 	}
 
@@ -147,6 +155,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
+		align-items: center;
 	}
 
 	.gallery .row {
@@ -160,13 +169,26 @@
 		box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
 	}
 
+	.gallery :global(img) {
+		max-width: 100%;
+	}
+
 	figure {
 		margin: 0;
 		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 15px;
 	}
 
-	figure img {
+	figure :global(img) {
 		max-width: 100%;
+	}
+
+	section.detail.center {
+		:global(img) { max-width: 750px; border: 32px solid white; }
+		aside { display: none; }
 	}
 
 	section.detail .wrapper {
@@ -181,26 +203,38 @@
 		width: 452px;
 	}
 
-	aside > :global(div:not(:last-child)) {
+	aside > :global(div:not(:first-child)) {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
 		margin-bottom: 40px;
 	}
 
-	aside :global(h2), aside :global(p) {
+	aside > :global(div:last-child) {
+		margin-bottom: 22px;
+	}
+
+	section.detail :global(h2), section.detail :global(p) {
 		margin: 0;
 	}
 
-	aside :global(h2) {
+	section.detail :global(h2) {
 		font-weight: 300;
 		font-size: 28px;
 		letter-spacing: -0.08em;
 	}
 
-	aside :global(p) {
+	section.detail :global(p) {
 		font-size: 17px;
+		font-weight: 300;
+	}
+
+	section.detail aside :global(p) {
 		font-weight: 400;
+	}
+
+	section.detail :global(a) {
+		color: white;
 	}
 
 	.links {
@@ -208,9 +242,11 @@
 		margin: 0;
 		padding: 0;
 		gap: 24px;
+		margin-bottom: 8px;
 	}
 
 	.embed {
-		margin-top: 15px;
+		// margin-top: 15px;
+		margin-bottom: 30px;
 	}
 </style>

@@ -1,7 +1,8 @@
 <script lang="ts">
 	import icon_flower from "$lib/res/icon_flower.svg"
-	import icon_diamond from "$lib/res/icon_diamond.svg"
-	// import drop from "$lib/res/drop14.png"
+	// import icon_diamond from "$lib/res/icon_diamond.svg"
+	import icon_diamond from "$lib/res/icon_diamond.png"
+	import drop from "$lib/res/drop14.png"
 
 	import preview_bitcafe from '$lib/res/preview_bitcafe.jpg'
 	import preview_lastredux from '$lib/res/preview_lastredux.jpg'
@@ -31,10 +32,11 @@
 </script>
 
 <section class="works">
-	<TitleHeader pad tangram icon={icon_flower}>works.</TitleHeader>
+	<TitleHeader tangram icon={icon_flower} center>works.</TitleHeader>
 
 	<div class="body">
 		<div class="wrapper">
+			<div class="heading"><span>✦</span><h2>UX Design • App Development</h2></div>
 			<div class="grid">
 				<Project
 					preview={preview_bitcafe}
@@ -43,52 +45,50 @@
 					name="bitcafé"
 					desc="hyper-expressive social media app for Gen Z."
 					icon="💫"
-					tags={['ui & ux', 'app dev', 'brand/visual']}
 				/>
 				<Project
 					preview={preview_lastredux}
 					logo={works_lastredux}
 					href="/lastredux"
 					name="LastRedux"
-					desc="fully redesigned, open-source Last.fm client."
+					desc="open-source, redesigned Last.fm app for Apple Music."
 					icon="✨"
-					tags={['ui & ux', 'app dev']}
-				/>
-				<Project
-					preview={preview_tc64}
-					logo={works_tc64}
-					href="/tc64"
-					name="TC64"
-					desc="my EDM music production & cover art designs."
-					icon="♪"
-					tags={['music', 'brand/visual']}
 				/>
 				<Project
 					preview={preview_konpu}
 					logo={works_konpu}
 					href="/konpu-studio"
 					name="konpu-STUDIO"
-					desc="bridging the artist-engineer gap @UCSB Allosphere."
+					desc="custom-built sound synthesizer & music creation app."
 					icon="🌸"
-					tags={['ui & ux', 'app dev']}
+				/>
+				<Project
+					preview={preview_audo}
+					logo={works_audo}
+					href="/audo"
+					name="audo"
+					desc="reimagining '90s “tracker” music apps for iPhone."
+					icon="🎹"
+				/>
+			</div>
+
+			<div class="heading"><span>✦</span><h2>Music • Brand • Visual Design</h2></div>
+			<div class="grid">
+				<Project
+					preview={preview_tc64}
+					logo={works_tc64}
+					href="/tc64"
+					name="TC64"
+					desc="my EDM music production & cover art design."
+					icon="♪"
 				/>
 				<Project
 					preview={preview_soundsociety}
 					logo={works_soundsociety}
 					href="/ucsb-sound-society"
 					name="UCSB Sound Society"
-					desc="brand & design for student music production club."
+					desc="brand & design for student music club."
 					icon="💿"
-					tags={['brand/visual']}
-				/>
-				<Project
-					preview={preview_audo}
-					logo={works_audo}
-					href="/audo"
-					name="Audo"
-					desc="1990s “music trackers” re-envisioned for today."
-					icon="🎹"
-					tags={['ui & ux', 'app dev']}
 				/>
 				<Project
 					preview={preview_ac}
@@ -97,34 +97,17 @@
 					name="AC Community"
 					desc="event branding for an online music collective."
 					icon="❄️"
-					tags={['brand/visual']}
-				/>
-				<Project
-					preview={preview_3d}
-					logo={works_3d}
-					href="/3d-artworks"
-					name="3D Artworks"
-					desc="my Blender projects."
-					icon="🦌"
-					count={2}
-					tags={['art & animation']}
-				/>
-				<Project
-					preview={preview_hackathon}
-					logo={works_hackathon}
-					href="/hackathon-projects"
-					name="Hackathon Projects"
-					desc="two Apple WWDC Scholarship wins & more!"
-					icon=""
-					count={4}
-					tags={['ui & ux', 'app dev']}
 				/>
 			</div>
 		</div>
+
+		<!-- <div class="drop2">
+			<img src={icon_diamond} height={64} alt="" />
+		</div> -->
 	</div>
 </section>
 
-<section class="more">
+<!-- <section class="more">
 	<TitleHeader pad icon={icon_diamond}>misc.</TitleHeader>
 	<div class="body">
 		<div class="wrapper">
@@ -151,10 +134,11 @@
 				/>
 		</div>
 	</div>
-	<!-- <div class="drop2">
+	
+	<div class="drop2">
 		<img src={drop} height={64} alt="" />
-	</div> -->
-</section>
+	</div>
+</section> -->
 
 
 <style lang="scss">
@@ -162,11 +146,15 @@
 		position: relative;
 		background-color: #FFF;
 	}
-	section.more {
+	section:not(:last-child) {
 		padding-bottom: 120px;
 	}
 	.wrapper {
 		@include wrapper;
+		@include contentStyles2;
+	}
+	.works {
+		margin-bottom: -50px;
 	}
 	.grid {
 		align-self: center;
@@ -174,9 +162,17 @@
 		grid-gap: 20px;
 		justify-content: center;
 		grid-template-columns: repeat(auto-fill, 398px);
+		grid-template-columns: repeat(auto-fill, 413px);
 		grid-auto-flow: row dense;
 		width: 100%;
 		margin: 4px 0 35px 0;
+		margin: 4px 0 50px 0;
+	}
+	.grid :global(.Project:last-child:nth-child(2n - 1)) {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		margin-left: 25%;
+		margin-right: 25%;
 	}
 
 
@@ -191,8 +187,9 @@
 		align-items: flex-end;
 		justify-content: center;
 		transform-origin: top center;
-		transition: transform 0.475s cubic-bezier(0.25, 0.45, 0.46, 0.94), filter 1.375s ease;
-		animation: wavera 1.3s ease-in infinite;
-		transform: rotate(0deg);
+		// transition: transform 0.475s cubic-bezier(0.25, 0.45, 0.46, 0.94), filter 1.375s ease;
+		// animation: wavera 1.3s ease-in infinite;
+		// transform: rotate(0deg);
+		margin-bottom: 50px;
 	}
 </style>
