@@ -17,7 +17,7 @@
 	export let title: string
 	export let subtitle = 'TC64'
 	export let date: string|null = null
-	export let img: string
+	export let img: string|null = null
 	export let icon: string|null = null
 	export let source = 'TC64'
 	export let sourceUrl = `${base}/tc64`
@@ -52,7 +52,9 @@
 	<section class="detail" class:center>
 		<div class="wrapper">
 			<figure>
-				<img src={img} alt={source == 'TC64' ? `${title} cover art` : ''} />
+				{#if img}
+					<img src={img} alt={source == 'TC64' ? `${title} cover art` : ''} />
+				{/if}
 				<slot name="images" />
 			</figure>
 

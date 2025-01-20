@@ -42,6 +42,6 @@
 	<slot/>
 </main>
 {#if !onTest}
-	<EmailBlock />
+	<EmailBlock {onRoot} />
 	<Footer />
 {/if}

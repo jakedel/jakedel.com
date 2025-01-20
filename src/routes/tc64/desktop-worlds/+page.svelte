@@ -9,7 +9,6 @@
 <SongTemplate
 	title="PLASTIC ZEST + &quot;DESKTOP WORLDS&quot;"
 	date="2023.09"
-	img={tc_plastic}
 >
 	<div>
 		<h2>Music production, design & video editing</h2>
@@ -22,10 +21,12 @@
 	</div>
 
 	<svelte:fragment slot="images">
+	<iframe class="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/UJDl4YZ3Htw?si=Hr2fKilEgbiAmlYB&start=38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+		<!-- svelte-ignore a11y-missing-attribute -->
+		<img src={tc_plastic} />
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<img src={tc_port} />
-
-		<iframe class="video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/UJDl4YZ3Htw?si=Hr2fKilEgbiAmlYB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 	</svelte:fragment>
 </SongTemplate>
 

@@ -10,15 +10,18 @@
 	import icon_diamond from "$lib/res/icon_diamond.png"
 
 	export let triangleColor: string | null = null;
+	export let onRoot = false;
 	let drip = false;
 	let hovered = false;
 </script>
 
-<div class="blooms">
-	<img src={icon_diamond} height={64} alt="" />
-</div>
+{#if onRoot}
+	<div class="blooms">
+		<img src={icon_diamond} height={64} alt="" />
+	</div>
+{/if}
 
-<div class="EmailBlock" class:hovered use:ripple={{ color: '#FFF2', disabled: !hovered }} >
+<div class="EmailBlock" class:notRoot={!onRoot} class:hovered use:ripple={{ color: '#FFF2', disabled: !hovered }} >
 	<div class="triangle" style:background-color={triangleColor} />
 	<NavButton bind:hovered bind:clicked={drip} large icon={icon_mail} text="thejakedel@gmail.com" href="mailto:thejakedel@gmail.com" />
 	<!-- <a href="mailto:thejakedel@gmail.com">thejakedel@gmail.com</a> -->
@@ -46,6 +49,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+	.EmailBlock.notRoot {
+		margin-top: 80px;
 	}
 	.EmailBlock {
 		position: relative;
