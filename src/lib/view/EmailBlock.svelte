@@ -51,7 +51,7 @@
 		justify-content: center;
 	}
 	.EmailBlock.notRoot {
-		margin-top: 80px;
+		margin-top: 86px;
 	}
 	.EmailBlock {
 		position: relative;
