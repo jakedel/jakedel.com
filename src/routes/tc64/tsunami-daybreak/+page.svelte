@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import tc_tsunami from '$lib/res/tc_tsunami.png'
 	import it_td from "$lib/res/it_td.png"
 	import SongTemplate from '$lib/view/template/SongTemplate.svelte'

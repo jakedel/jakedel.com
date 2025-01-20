@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import tc_aoryu from '$lib/res/tc_aoryu.png'
 	// import ic_aoryu from '$lib/res/ic_aoryu.svg'
 	import it1 from "$lib/res/it_ao_1.png"

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import works_konpu from '$lib/res/works_konpu.png'
 	import ks_hero from '$lib/res/ks_hero.png'
 	import ProjectTemplate from "$lib/view/template/ProjectTemplate.svelte"

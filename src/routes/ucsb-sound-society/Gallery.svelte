@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import soso_logo from '$lib/res/soso_logo.jpg'
 	import soso_openmic from '$lib/res/soso_openmic.jpg'
 	import soso_scs from '$lib/res/soso_scs_2.jpg'

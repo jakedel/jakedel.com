@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import ic_back_color from '$lib/res/ic_back_color.png'
 	import NavButton from "./NavButton.svelte"
 	export let text = "back"

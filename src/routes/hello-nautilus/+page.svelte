@@ -30,7 +30,7 @@
 	import folder_allicons from '$lib/res/folder_allicons.png'
 
 	import TitleHeader from "$lib/view/TitleHeader.svelte"
-	import Project from "../lib/view/Project.svelte"
+	import Project from "$lib/view/Project.svelte"
 </script>
 
 <section class="works">
@@ -117,21 +117,21 @@
 				<Project
 					folder
 					logo={folder_additionalworks}
-					href="additional-works"
+					href="{base}/additional-works"
 					name="Other Works."
 				/>
 	
 				<Project
 					folder
 					logo={folder_alllogos}
-					href="logos"
+					href="{base}/logos"
 					name="Logo Designs."
 				/>
 	
 				<Project
 					folder
 					logo={folder_allicons}
-					href="icons"
+					href="{base}/icons"
 					name="Icon Designs."
 				/>
 		</div>

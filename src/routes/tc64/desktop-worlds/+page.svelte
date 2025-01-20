@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import tc_plastic from '$lib/res/tc_plastic.png'
 	import tc_port from '$lib/res/tc_port.png'
 	import SongTemplate from '$lib/view/template/SongTemplate.svelte'

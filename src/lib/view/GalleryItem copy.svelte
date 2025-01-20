@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	export let text = ''
 	export let img = ''
 	export let href = ''

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import SongTemplate from "$lib/view/template/SongTemplate.svelte"
 	import soso_openmic from '$lib/res/soso_openmic.jpg'
 	import it_soso_openmic from '$lib/res/it_soso_openmic.jpg'
@@ -10,7 +12,7 @@
 	date="2022.02"
 	img={soso_openmic}
 	source="sound society"
-	sourceUrl="/ucsb-sound-society"
+	sourceUrl="{base}/ucsb-sound-society"
 	center
 >
 	<svelte:fragment slot="images">

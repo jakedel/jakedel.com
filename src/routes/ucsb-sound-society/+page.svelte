@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import works_soundsociety from '$lib/res/works_soundsociety_hq.png'
 	import ProjectTemplate from "$lib/view/template/ProjectTemplate.svelte"
 	import Gallery from './Gallery.svelte'

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	export let icon: string|null = null;
 	export let subtitle: string|null = null;
 	export let scent = false;

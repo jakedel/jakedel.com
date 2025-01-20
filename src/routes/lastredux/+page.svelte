@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import works_lastredux from '$lib/res/works_lastredux_hq.png'
 	import Back from '$lib/view/Back.svelte'
 	import ProjectTemplate from '$lib/view/template/ProjectTemplate.svelte'

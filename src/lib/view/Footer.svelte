@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import drop from "$lib/res/drop14.png"
 	import icon_github from '$lib/res/ic_github_colors.png'
 	import icon_soundcloud from '$lib/res/ic_soundcloud_colors.png'

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import NavButton from "./NavButton.svelte"
 	import drop from "$lib/res/drop14.png"
 	import icon_mail from "$lib/res/icon_mail.svg"

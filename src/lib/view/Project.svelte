@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import icon_folder from "$lib/res/icon_folder_3.png"
 	import { ripple } from "svelte-ripple-action";
 	import Tag from "./Tag.svelte"

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import '$lib/css/index.scss'
 	import 'svelte-ripple-action/ripple.css'
 	import {afterNavigate,onNavigate} from '$app/navigation'
@@ -26,7 +28,8 @@
 	// })
 
 	$: onRoot = $page.url.pathname === '/' 
-	$: onTest = $page.url.pathname === '/test' 
+	$: onTest = $page.url.pathname === '/test'
+	export const prerender = true 
 </script>
 
 {#if !onTest}

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import Title from "./Title.svelte"
 
 	export let tangram = false;

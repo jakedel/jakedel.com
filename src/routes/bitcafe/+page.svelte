@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import works_bitcafe from '$lib/res/works_bitcafe.png'
 	import ProjectTemplate from "$lib/view/template/ProjectTemplate.svelte"
 </script>

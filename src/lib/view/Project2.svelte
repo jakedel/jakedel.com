@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import icon_folder from "$lib/res/icon_folder_3.png"
 	import { ripple } from "svelte-ripple-action";
 	import Tag from "./Tag.svelte"
@@ -20,7 +22,7 @@
 	class:folder
 	use:ripple={{color: '#FF5BAD28'}}
 	draggable="false"
-	href="/"
+	href="{base}/"
 >
 	{#if preview}
 		<div class="preview" style:background-image="url({preview})" style:--image="url({preview})">

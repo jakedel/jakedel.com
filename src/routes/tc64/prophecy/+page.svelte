@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import tc_prophecy from '$lib/res/tc_prophecy.png'
 	import SongTemplate from '$lib/view/template/SongTemplate.svelte'
 </script>

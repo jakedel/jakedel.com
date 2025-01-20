@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import tc_rainforest from '$lib/res/tc_rainforest.png'
 	import SongTemplate from '$lib/view/template/SongTemplate.svelte'
 </script>

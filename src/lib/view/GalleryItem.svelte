@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	export let img = ''
 	export let text = ''
 	export let year: string|null = null
@@ -9,10 +11,9 @@
 	export let expand = false
 </script>
 
-<svelte:element
-	this={href ? 'a' : 'div'}
+<a
 	class="GalleryItem"
-	{href}
+	href={href ? `${base}${href}` : undefined}
 	class:square
 	class:expand
 	class:wide={!square}
@@ -33,7 +34,7 @@
 			{/if}
 		</figcaption>
 	</figure>
-</svelte:element>
+</a>
 
 <style lang="scss">
 	.GalleryItem {

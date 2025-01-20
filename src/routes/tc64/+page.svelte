@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import works_tc64 from '$lib/res/works_tc64_hq.png'
 	import tc_banner from '$lib/res/tc_banner_s.jpg'
 	import tc_tsunami from '$lib/res/tc_tsunami_s.jpg'

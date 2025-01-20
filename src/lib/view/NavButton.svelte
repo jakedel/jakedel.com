@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import { ripple } from "svelte-ripple-action"
 
 	export let animated = false;

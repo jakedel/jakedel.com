@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import logo from '$lib/res/logo_aqua_wonder.png'
 	import icon_github from '$lib/res/icon_github.svg'
 	import icon_soundcloud from '$lib/res/icon_soundcloud.svg'

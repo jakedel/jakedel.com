@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import aqueous_dreamer from "$lib/res/aqueous_dreamer.png"
 	import lucid_echo from "$lib/res/lucid_echo.png"
 	import icon_designer from "$lib/res/icon_designer.svg"

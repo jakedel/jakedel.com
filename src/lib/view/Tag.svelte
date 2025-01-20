@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import icon_tag from '$lib/res/icon_tag.png'
 </script>
 

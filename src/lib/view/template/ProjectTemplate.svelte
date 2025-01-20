@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import Title from "../Title.svelte";
 	import Tag from "../Tag.svelte";
 	import ic_soundcloud from '$lib/res/ic_soundcloud_colors.png'
@@ -87,7 +89,7 @@
 	</div>
 {/if}
 
-<Back text="back to index" href="/" />
+<Back text="back to index" href="{base}/" />
 
 
 

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import ic_link from "$lib/res/ic_link.svg"
 	import ic_link_color from "$lib/res/ic_link_color.svg"
 	import { ripple } from 'svelte-ripple-action'

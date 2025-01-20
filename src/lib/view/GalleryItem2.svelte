@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	export let img = ''
 	export let text = ''
 	export let year: string

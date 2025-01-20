@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import works_ac from '$lib/res/works_ac.png'
 	import ac_hero from '$lib/res/ac_hero.jpg'
 	import ac_promo from '$lib/res/ac_promo.png'

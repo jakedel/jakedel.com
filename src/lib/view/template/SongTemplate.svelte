@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+
 	import icon_soundcloud from '$lib/res/icon_soundcloud.svg'
 	import ic_spotify from '$lib/res/ic_spotify.svg'
 	import ic_applemusic from '$lib/res/ic_applemusic.svg'
@@ -18,7 +20,7 @@
 	export let img: string
 	export let icon: string|null = null
 	export let source = 'TC64'
-	export let sourceUrl = '/tc64'
+	export let sourceUrl = `${base}/tc64`
 	export let center = false
 
 	export let soundcloud: string | null = null;
